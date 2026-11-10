@@ -17,6 +17,8 @@ The implementation is intended as a transparent numerical-methods project: the g
 
 ## Governing equations
 
+## Governing Equations
+
 For a two-dimensional incompressible flow, the velocity components are defined in terms of the streamfunction $\psi$:
 
 $$
@@ -25,38 +27,35 @@ u = \frac{\partial \psi}{\partial y},
 v = -\frac{\partial \psi}{\partial x}
 $$
 
-The scalar vorticity is
+The scalar vorticity is:
 
 $$
-\omega\ = \frac{\partial v}{\partial x}
-- \frac{\partial u}{\partial y}
-= -\nabla^2\psi
+\omega = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}
+= -\nabla^2 \psi
 $$
 
 Therefore, the streamfunction satisfies the Poisson equation:
 
 $$
-\nabla^2\psi = -\omega
+\nabla^2 \psi = -\omega
 $$
 
-The nondimensional vorticity transport equation is
+The nondimensional vorticity transport equation is:
 
 $$
 \frac{\partial \omega}{\partial t}
-
-u\frac{\partial \omega}{\partial x}
-
-v\frac{\partial \omega}{\partial y}
++ u\frac{\partial \omega}{\partial x}
++ v\frac{\partial \omega}{\partial y}
 = \frac{1}{Re}\nabla^2\omega
 $$
 
-where
+where:
 
 $$
 Re = \frac{U_{\mathrm{lid}}L}{\nu}
 $$
 
-is the Reynolds number, $U_{\mathrm{lid}}$ is the lid velocity, $L$ is the cavity length and $\nu$ is the kinematic viscosity.
+is the Reynolds number, $U_{\mathrm{lid}}$ is the lid velocity, $L$ is the cavity length, and $\nu$ is the kinematic viscosity.
 
 ## Numerical methodology
 
