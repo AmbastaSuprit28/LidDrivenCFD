@@ -70,28 +70,36 @@ The current implementation uses:
 | Poisson iteration | Red-black Successive Over-Relaxation (SOR) |
 | Wall vorticity | Thom's approximation |
 
-### Streamfunction Poisson equation
+Streamfunction Poisson Equation
 
-For a uniform square grid with spacing \(h\), the five-point discretisation of \(\nabla^2\psi=-\omega\) gives
+For a uniform square grid with spacing $h$, the five-point discretisation of $\nabla^2\psi=-\omega$ gives
+
 $$
-\[
 \psi_{i,j} =
 \frac{
 \psi_{i+1,j}+\psi_{i-1,j}
 +\psi_{i,j+1}+\psi_{i,j-1}
 +h^2\omega_{i,j}
-}{4}.
-\]
+}{4}
 $$
+
 SOR relaxes the Gauss–Seidel estimate according to
+
+(1-\alpha)\psi_{i,j}^{,\mathrm{old}}
++\alpha\psi_{i,j}^{,\mathrm{GS}}
 $$
-\[
-\psi_{i,j}^{\,new}
-=(1-\alpha)\psi_{i,j}^{\,old}
-+\alpha\psi_{i,j}^{\,GS},
-\]
+
+where $\alpha$ is the relaxation factor. The implementation updates alternating red and black grid points.
+
+Boundary Conditions
+
+The streamfunction is constant on the cavity walls and is set to zero:
+
 $$
-where \(\alpha\) is the relaxation factor. The implementation updates alternating red and black grid points.
+\psi=0 \qquad \text{on all walls}
+$$
+
+The top lid moves with the prescribed horizontal velocity $U_{\mathrm{lid}}$; the other three walls are stationary. Wall vorticity is obtained using Thom's approximation.
 
 ### Boundary conditions
 
