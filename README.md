@@ -2,7 +2,7 @@
 
 ### A from-scratch 2D lid-driven cavity flow solver in Python
 
-A from-scratch Python implementation of the Finite Difference Method, along with the Successive Over-Relaxation (SOR) method, to solve the classic 2D Lid-Driven Cavity problem. The solver employs the vorticity–streamfunction formulation of the incompressible 2D Navier–Stokes equations for low Reynolds numbers. Validated against the Ghia et al. (1982) benchmark at \(Re=100\).
+An from-scratch Python implementation of the Finite Difference Method,along with the Successive Over-Relaxation, to solve the classic 2D Lid-Driven Cavity problem.The solver employs the vorticity–streamfunction formulation of the incompressible 2D Navier–Stokes equations for low Re.Validated against the Ghia et al. (1982) benchmark at Re = 100.
 
 ---
 
@@ -113,7 +113,6 @@ The \(Re=100\) solution is compared against the centreline velocity data reporte
 ```text
 LidDrivenCFD/
 ├── README.md
-├── requirements.txt
 ├── src/
 │   ├── parameters.py
 │   ├── geometry.py
