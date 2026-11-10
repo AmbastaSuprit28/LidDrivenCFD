@@ -86,11 +86,10 @@ $$
 $$
 
 SOR relaxes the Gauss–Seidel estimate according to
-
+$$
 (1-\alpha)\psi_{i,j}^{,\mathrm{old}}
 +\alpha\psi_{i,j}^{,\mathrm{GS}}
 $$
-
 where $\alpha$ is the relaxation factor. The implementation updates alternating red and black grid points.
 
 Boundary Conditions
