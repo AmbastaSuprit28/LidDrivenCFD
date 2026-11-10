@@ -8,16 +8,24 @@ The implementation is intended as a transparent numerical-methods project: the g
 
 Governing Equations
 
+## Governing Equations
+
 For a two-dimensional incompressible flow, the velocity components are defined in terms of the streamfunction $\psi$:
 
-$$u = \frac{\partial \psi}{\partial y},
+$$
+u = \frac{\partial \psi}{\partial y},
 \qquad
-v = -\frac{\partial \psi}{\partial x}$$
+v = -\frac{\partial \psi}{\partial x}
+$$
 
 The scalar vorticity is
 
+$$
+\omega =
+\frac{\partial v}{\partial x}
+-
 \frac{\partial u}{\partial y}
-
+=
 -\nabla^2\psi
 $$
 
@@ -29,6 +37,13 @@ $$
 
 The nondimensional vorticity transport equation is
 
+$$
+\frac{\partial \omega}{\partial t}
++
+u\frac{\partial \omega}{\partial x}
++
+v\frac{\partial \omega}{\partial y}
+=
 \frac{1}{Re}\nabla^2\omega
 $$
 
