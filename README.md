@@ -120,9 +120,9 @@ The outer iteration monitors the maximum change in interior vorticity between su
 
 ## Results
 
-The solver has been run for the \(Re=100\) lid-driven cavity on both \(41\times41\) and \(81\times81\) grids.
+The solver has been run for the \(Re=100\) lid-driven cavity on (81\times\81) grids.
 
-The final \(81\times81\) run reached the configured outer stopping tolerance of \(10^{-8}\) at iteration 74,705. The reported outer residual was approximately \(1.00\times10^{-8}\).
+The final 81 X 81 run reached the configured outer stopping tolerance of 10^-8 at iteration 74,705. The reported outer residual was approximately 10^-8.
 
 ### Flow visualisations
 
@@ -164,36 +164,12 @@ LidDrivenCFD/
 │   ├── solver.py
 │   └── visualization.py
 ├── validation/
-│   ├── ghia_1982/
-│   │   ├── ghia_Re100.csv
-│   │   └── compare.py
-│   └── results/
-├── results/
-├── docs/
-└── tests/
+│   ├── ghia_1982.pdf
+│   ├── cavity_Re100.npz
+│   └──ghia et al 1982 comparison.png
+│   
 ```
 
-## Getting started
-
-### Requirements
-
-- Python 3
-- NumPy
-- Matplotlib
-
-Install the dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Running the solver
-
-The run command will be documented here once the project entry point and final module layout are in place.
-
-## Scope and limitations
-
-This repository focuses on a two-dimensional, incompressible, Newtonian lid-driven cavity at low Reynolds number. It is an educational and portfolio implementation of finite-difference CFD methods; it is not intended to be a general-purpose CFD package.
 
 ## Reference
 
