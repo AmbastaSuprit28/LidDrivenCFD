@@ -15,8 +15,6 @@ This project implements the problem from scratch using finite differences. Press
 
 The implementation is intended as a transparent numerical-methods project: the governing equations, discretisation, iterative Poisson solve, boundary treatment and benchmark comparison are kept explicit.
 
-## Governing equations
-
 ## Governing Equations
 
 For a two-dimensional incompressible flow, the velocity components are defined in terms of the streamfunction $\psi$:
@@ -54,20 +52,6 @@ $$
 
 is the Reynolds number, $U_{\mathrm{lid}}$ is the lid velocity, $L$ is the cavity length, and $\nu$ is the kinematic viscosity.
 
-## Numerical methodology
-
-The current implementation uses:
-
-| Component | Method |
-|---|---|
-| Spatial discretisation | Finite Difference Method |
-| Convective terms in the vorticity equation | First-order upwind differences |
-| Diffusive terms | Second-order central differences |
-| Time integration | Explicit Euler |
-| Streamfunction equation | Five-point finite-difference Poisson operator |
-| Poisson iteration | Red-black Successive Over-Relaxation (SOR) |
-| Wall vorticity | Thom's approximation |
-
 ##Streamfunction Poisson Equation
 
 For a uniform square grid with spacing $h$, the five-point discretisation of $\nabla^2\psi=-\omega$ gives
@@ -88,7 +72,7 @@ $$
 $$
 where $\alpha$ is the relaxation factor. The implementation updates alternating red and black grid points.
 
-Boundary Conditions
+## Boundary Conditions
 
 The streamfunction is constant on the cavity walls and is set to zero:
 
@@ -97,16 +81,6 @@ $$
 $$
 
 The top lid moves with the prescribed horizontal velocity $U_{\mathrm{lid}}$; the other three walls are stationary. Wall vorticity is obtained using Thom's approximation.
-
-### Boundary conditions
-
-The streamfunction is constant on the cavity walls and is set to zero:
-$$
-\[
-\psi=0 \qquad \text{on all walls}.
-\]
-$$
-The top lid moves with the prescribed horizontal velocity \(U_{\mathrm{lid}}\); the other three walls are stationary. Wall vorticity is obtained using Thom's approximation.
 
 ### Time marching
 
