@@ -51,7 +51,7 @@ $$
 
 is the Reynolds number, $U_{\mathrm{lid}}$ is the lid velocity, $L$ is the cavity length, and $\nu$ is the kinematic viscosity.
 
-##Streamfunction Poisson Equation
+## Streamfunction Poisson Equation
 
 For a uniform square grid with spacing $h$, the five-point discretisation of $\nabla^2\psi=-\omega$ gives
 
