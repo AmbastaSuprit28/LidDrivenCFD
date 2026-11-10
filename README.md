@@ -43,10 +43,7 @@ $$
 The nondimensional vorticity transport equation is:
 
 $$
-\frac{\partial \omega}{\partial t}
-+ u\frac{\partial \omega}{\partial x}
-+ v\frac{\partial \omega}{\partial y}
-= \frac{1}{Re}\nabla^2\omega
+\frac{\partial \omega}{\partial t} + u\frac{\partial \omega}{\partial x} + v\frac{\partial \omega}{\partial y} = \frac{1}{Re}\nabla^2\omega
 $$
 
 where:
