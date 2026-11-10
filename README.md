@@ -93,7 +93,7 @@ Boundary Conditions
 The streamfunction is constant on the cavity walls and is set to zero:
 
 $$
-\psi=0 \qquad \text{on all walls}
+\psi = 0 \qquad \text{on all walls}
 $$
 
 The top lid moves with the prescribed horizontal velocity $U_{\mathrm{lid}}$; the other three walls are stationary. Wall vorticity is obtained using Thom's approximation.
