@@ -28,7 +28,7 @@ $$
 The scalar vorticity is
 
 $$
-\omega = \frac{\partial v}{\partial x}
+\omega\ = \frac{\partial v}{\partial x}
 - \frac{\partial u}{\partial y}
 = -\nabla^2\psi
 $$
@@ -160,8 +160,3 @@ LidDrivenCFD/
 │   └──ghia et al 1982 comparison.png
 │   
 ```
-
-
-## Reference
-
-Ghia, U., Ghia, K. N., and Shin, C. T. (1982). “High-Re solutions for incompressible flow using the Navier–Stokes equations and a multigrid method.” *Journal of Computational Physics*, 48(3), 387–411.
