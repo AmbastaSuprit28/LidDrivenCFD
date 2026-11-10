@@ -10,11 +10,9 @@ Governing Equations
 
 For a two-dimensional incompressible flow, the velocity components are defined in terms of the streamfunction $\psi$:
 
-$$
-u = \frac{\partial \psi}{\partial y},
+$$u = \frac{\partial \psi}{\partial y},
 \qquad
-v = -\frac{\partial \psi}{\partial x}
-$$
+v = -\frac{\partial \psi}{\partial x}$$
 
 The scalar vorticity is
 
