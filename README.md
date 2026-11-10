@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34645870/README.md)
 # LidDrivenCFD
 
 ### A from-scratch 2D lid-driven cavity flow solver in Python
