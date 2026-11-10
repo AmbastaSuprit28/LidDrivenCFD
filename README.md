@@ -120,33 +120,24 @@ The outer iteration monitors the maximum change in interior vorticity between su
 
 ## Results
 
-The solver has been run for the \(Re=100\) lid-driven cavity on (\81\times\81\) grids.
+The solver has been run for the \(Re=100\) lid-driven cavity on 81 X 81 grid.
 
 The final 81 X 81 run reached the configured outer stopping tolerance of 10^-8 at iteration 74,705. The reported outer residual was approximately 10^-8.
 
 ### Flow visualisations
-
-Add the generated figures to the `results/` directory using these filenames, or update the paths below to match your files.
-
-| Streamfunction contours | Velocity vector field |
-|---|---|
-| ![Streamfunction contours](results/streamfunction.png) | ![Velocity vector field](results/velocity_vectors.png) |
-
-| Vorticity contours | Velocity magnitude |
-|---|---|
-| ![Vorticity contours](results/vorticity.png) | ![Velocity magnitude](results/velocity_magnitude.png) |
+<img width="700" height="600" alt="Figure_1" src="https://github.com/user-attachments/assets/79823c29-9e90-4b25-bf77-3160ba81dc53" />
+<img width="700" height="600" alt="2" src="https://github.com/user-attachments/assets/a211016a-777d-4a9b-92e8-bb472a9b3984" />
+<img width="700" height="600" alt="3" src="https://github.com/user-attachments/assets/3f05025a-c4cf-4453-b2e0-113911e30e19" />
+<img width="700" height="600" alt="4" src="https://github.com/user-attachments/assets/f5f9b75e-1f08-4119-9ba5-2bbc52398181" />
+<img width="700" height="500" alt="5" src="https://github.com/user-attachments/assets/0b545a89-b222-43a3-ad2c-e99b5ad6b3f4" />
+<img width="700" height="500" alt="6" src="https://github.com/user-attachments/assets/1e7a7d5a-d4ee-4bec-9673-1930711e4aee" />
+<img width="1189" height="544" alt="ghia et al 1982 comparison" src="https://github.com/user-attachments/assets/4d1c88cf-dae0-48bc-8859-805d3f3522d9" />
 
 ## Benchmark validation
 
 The \(Re=100\) solution is compared against the centreline velocity data reported by:
 
 **Ghia, U., Ghia, K. N., and Shin, C. T. (1982).** “High-Re solutions for incompressible flow using the Navier–Stokes equations and a multigrid method.” *Journal of Computational Physics*, 48(3), 387–411.
-
-The comparison uses the vertical-centreline horizontal velocity \(u(0.5,y)\) and the horizontal-centreline vertical velocity \(v(x,0.5)\).
-
-![Centreline comparison with Ghia et al. (1982)](validation/results/ghia_81x81_side_by_side.png)
-
-The benchmark comparison is intended to assess whether the computed velocity profiles reproduce the established \(Re=100\) cavity solution. The reference data and comparison script are kept in `validation/ghia_1982/`.
 
 ## Repository structure
 
