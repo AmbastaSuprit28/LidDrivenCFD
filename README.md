@@ -18,42 +18,42 @@ The implementation is intended as a transparent numerical-methods project: the g
 ## Governing equations
 
 For a two-dimensional incompressible flow, the velocity components are defined in terms of the streamfunction \(\psi\):
-
+$$
 \[
 u = \frac{\partial \psi}{\partial y},
 \qquad
 v = -\frac{\partial \psi}{\partial x}.
 \]
-
+$$
 The scalar vorticity is
-
+$$
 \[
 \omega = \frac{\partial v}{\partial x}
        - \frac{\partial u}{\partial y}
        = -\nabla^2\psi.
 \]
-
+$$
 Therefore, the streamfunction satisfies the Poisson equation
-
+$$
 \[
 \nabla^2\psi = -\omega.
 \]
-
+$$
 The nondimensional vorticity transport equation is
-
+$$
 \[
 \frac{\partial \omega}{\partial t}
 + u\frac{\partial \omega}{\partial x}
 + v\frac{\partial \omega}{\partial y}
 = \frac{1}{Re}\nabla^2\omega,
 \]
-
+$$
 where
-
+$$
 \[
 Re = \frac{U_{\mathrm{lid}}L}{\nu}
 \]
-
+$$
 is the Reynolds number, \(U_{\mathrm{lid}}\) is the lid velocity, \(L\) is the cavity length and \(\nu\) is the kinematic viscosity.
 
 ## Numerical methodology
@@ -73,7 +73,7 @@ The current implementation uses:
 ### Streamfunction Poisson equation
 
 For a uniform square grid with spacing \(h\), the five-point discretisation of \(\nabla^2\psi=-\omega\) gives
-
+$$
 \[
 \psi_{i,j} =
 \frac{
@@ -82,25 +82,25 @@ For a uniform square grid with spacing \(h\), the five-point discretisation of \
 +h^2\omega_{i,j}
 }{4}.
 \]
-
+$$
 SOR relaxes the Gauss–Seidel estimate according to
-
+$$
 \[
 \psi_{i,j}^{\,new}
 =(1-\alpha)\psi_{i,j}^{\,old}
 +\alpha\psi_{i,j}^{\,GS},
 \]
-
+$$
 where \(\alpha\) is the relaxation factor. The implementation updates alternating red and black grid points.
 
 ### Boundary conditions
 
 The streamfunction is constant on the cavity walls and is set to zero:
-
+$$
 \[
 \psi=0 \qquad \text{on all walls}.
 \]
-
+$$
 The top lid moves with the prescribed horizontal velocity \(U_{\mathrm{lid}}\); the other three walls are stationary. Wall vorticity is obtained using Thom's approximation.
 
 ### Time marching
