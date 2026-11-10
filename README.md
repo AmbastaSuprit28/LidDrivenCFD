@@ -120,7 +120,7 @@ The outer iteration monitors the maximum change in interior vorticity between su
 
 ## Results
 
-The solver has been run for the \(Re=100\) lid-driven cavity on (81\times\81) grids.
+The solver has been run for the \(Re=100\) lid-driven cavity on (\81\times\81\) grids.
 
 The final 81 X 81 run reached the configured outer stopping tolerance of 10^-8 at iteration 74,705. The reported outer residual was approximately 10^-8.
 
